@@ -14,6 +14,7 @@
 		3F4B12411F5997280048F562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4B123F1F5997280048F562 /* LaunchScreen.storyboard */; };
 		3F4B124C1F5997280048F562 /* toDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B124B1F5997280048F562 /* toDoListTests.swift */; };
 		3F4B12571F5997280048F562 /* toDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B12561F5997280048F562 /* toDoListUITests.swift */; };
+		3F84C6801F5DD9C200B91940 /* InputTodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F84C67F1F5DD9C100B91940 /* InputTodoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3F4B12521F5997280048F562 /* toDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4B12561F5997280048F562 /* toDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoListUITests.swift; sourceTree = "<group>"; };
 		3F4B12581F5997280048F562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F84C67F1F5DD9C100B91940 /* InputTodoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTodoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				3F4B12361F5997280048F562 /* AppDelegate.swift */,
 				3F4B12381F5997280048F562 /* ViewController.swift */,
+				3F84C67F1F5DD9C100B91940 /* InputTodoController.swift */,
 				3F4B123A1F5997280048F562 /* Main.storyboard */,
 				3F4B123D1F5997280048F562 /* Assets.xcassets */,
 				3F4B123F1F5997280048F562 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F84C6801F5DD9C200B91940 /* InputTodoController.swift in Sources */,
 				3F4B12391F5997280048F562 /* ViewController.swift in Sources */,
 				3F4B12371F5997280048F562 /* AppDelegate.swift in Sources */,
 			);
