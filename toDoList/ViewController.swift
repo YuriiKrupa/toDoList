@@ -38,13 +38,25 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        var todo : String = toDoListItems[indexPath.row]
-        
+        let todo : String = toDoListItems[indexPath.row]
         cell.textLabel?.text = todo
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: "DELETE") { action, index in
+            print("button delete tapped")
+            
+        }
+            delete.backgroundColor = UIColor.red
         
+        let star = UITableViewRowAction(style: .normal, title: "Star") { action, index in
+            print("button star tapped")
+        }
+            star.backgroundColor = UIColor.orange
         
+        return [delete, star]
     }
 
 }

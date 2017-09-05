@@ -19,10 +19,12 @@ class InputTodoController: UIViewController {
     
     @IBAction func btnSubmit(_ sender: Any) {
         
-        let todo : String = todoInput.text!
-        
-        toDoListItems.append(todo)
-        
+        if todoInput.text != "" {
+            let todo : String = todoInput.text!
+            toDoListItems.append(todo)
+            todoInput.text = nil
+            _ = navigationController?.popViewController(animated: true)
+        }
     }
     
 }
