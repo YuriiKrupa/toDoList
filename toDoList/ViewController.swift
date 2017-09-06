@@ -47,6 +47,8 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: "DELETE") { action, index in
             print("button delete tapped")
+            toDoListItems.remove(at: indexPath.row)
+            tableView.reloadData()
             
         }
             delete.backgroundColor = UIColor.red
@@ -59,5 +61,9 @@ class ViewController: UITableViewController {
         return [delete, star]
     }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        print("del")
+    }
+    
 }
 
