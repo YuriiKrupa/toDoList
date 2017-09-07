@@ -16,6 +16,7 @@ class EditTodoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Edit your task"
         editItemTextArea.text = toDoListItems[currentItem.row]
         
     }

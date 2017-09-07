@@ -14,6 +14,7 @@ class InputTodoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Create new task"
         
     }
     
