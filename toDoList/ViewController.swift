@@ -53,16 +53,21 @@ class ViewController: UITableViewController {
         }
             delete.backgroundColor = UIColor.red
         
-        let star = UITableViewRowAction(style: .normal, title: "Star") { action, index in
-            print("button star tapped")
-        }
-            star.backgroundColor = UIColor.orange
+        //let star = UITableViewRowAction(style: .normal, title: "Star") { action, index in
+          //  print("button star tapped")
+        //}
+          //  star.backgroundColor = UIColor.orange
         
-        return [delete, star]
+        return [delete]//, star]
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        print("del")
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "linkToEditView" ,
+            let nextScene = segue.destination as? EditTodoController,
+            let indexPath = self.tableView.indexPathForSelectedRow {
+            //let selectedItem = toDoListItems[indexPath.row]
+            nextScene.currentItem = indexPath
+        }
     }
     
 }
