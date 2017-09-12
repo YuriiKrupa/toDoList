@@ -10,7 +10,6 @@ import UIKit
 
 var toDoListItems = [String]()
 
-
 class ViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,12 +53,12 @@ class ViewController: UITableViewController {
         }
             delete.backgroundColor = UIColor.red
         
-        //let star = UITableViewRowAction(style: .normal, title: "Star") { action, index in
-          //  print("button star tapped")
-        //}
-          //  star.backgroundColor = UIColor.orange
+        let star = UITableViewRowAction(style: .normal, title: "Star") { action, index in
+          print("button star tapped")
+        }
+          star.backgroundColor = UIColor.orange
         
-        return [delete]//, star]
+        return [star, delete]
     }
 
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

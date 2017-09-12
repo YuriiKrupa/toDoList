@@ -12,6 +12,12 @@ class EditTodoController: UIViewController {
     
     var currentItem : IndexPath = IndexPath()
     
+    private func showWarningMsg(textMsg: String) {
+        let alert = UIAlertController(title: "Warning!", message: textMsg, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var editItemTextArea: UITextView!
     
     override func viewDidLoad() {
@@ -23,7 +29,11 @@ class EditTodoController: UIViewController {
     
     @IBAction func saveItemButton(_ sender: Any) {
         print("Save btn tapped")
-        toDoListItems[currentItem.row] = editItemTextArea.text
+        if toDoListItems.contains(editItemTextArea.text!) {
+          showWarningMsg(textMsg: "АЛЯРМ таке вже єст")
+        }else{
+            toDoListItems[currentItem.row] = editItemTextArea.text!
+        }
         navigationController?.popViewController(animated: true)
         
     }

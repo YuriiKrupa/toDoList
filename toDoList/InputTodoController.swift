@@ -18,13 +18,19 @@ class InputTodoController: UIViewController {
         
     }
     
+    private func showWarningMsg(textMsg: String) {
+        let alert = UIAlertController(title: "Warning!", message: textMsg, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func btnSubmit(_ sender: Any) {
         
         if todoInput.text != "" {
             let todo : String = todoInput.text!
-            toDoListItems.append(todo)
+            toDoListItems.contains(todo) ? showWarningMsg(textMsg: "АЛЯРМ") : toDoListItems.append(todo)
             todoInput.text = nil
-            _ = navigationController?.popViewController(animated: true)
+            navigationController?.popViewController(animated: true)
         }
     }
     
